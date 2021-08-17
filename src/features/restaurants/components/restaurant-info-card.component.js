@@ -2,6 +2,7 @@ import React from "react";
 
 import { Text } from "../../../components/typography/text.component";
 import { Spacer } from "../../../components/spacer/spacer.component";
+import { SvgXml } from "react-native-svg";
 
 import {
   Icon,
@@ -12,8 +13,6 @@ import {
   Rating,
   Section,
   SectionEnd,
-  Open,
-  Star,
 } from "./restaurant-info-card.styles";
 
 import star from "../../../../assets/star";
@@ -42,7 +41,7 @@ export const RestaurantInfo = ({ restaurant = {} }) => {
         <Section>
           <Rating>
             {ratingArray.map(() => (
-              <Star xml={star} width={20} height={20} />
+              <SvgXml xml={star} width={20} height={20} />
             ))}
           </Rating>
           <SectionEnd>
@@ -50,7 +49,7 @@ export const RestaurantInfo = ({ restaurant = {} }) => {
               <Text variant="error">CLOSED TEMPORARILY</Text>
             )}
             <Spacer position="left" size="large">
-              {isOpenNow && <Open xml={open} />}
+              {isOpenNow && <SvgXml xml={open} width={20} height={20} />}
             </Spacer>
             <Spacer position="left" size="large">
               <Icon source={{ uri: icon }} />
