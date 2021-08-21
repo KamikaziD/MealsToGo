@@ -18,7 +18,7 @@ import {
 import star from "../../../../assets/star";
 import open from "../../../../assets/open";
 
-export const RestaurantInfo = ({ restaurant = {} }) => {
+export const RestaurantInfoCard = ({ restaurant = {} }) => {
   const {
     name = "Roadside Cafe",
     icon = "https://www.kindpng.com/picc/m/57-575167_list-of-restaurants-restaurant-icon-white-png-transparent.png",
