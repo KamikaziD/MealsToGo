@@ -1,16 +1,18 @@
 import styled from "styled-components/native";
 import { Card } from "react-native-paper";
 import MapView from "react-native-maps";
+import WebView from "react-native-webview";
 
 export const MapCard = styled(Card)`
   background-color: ${(props) => props.theme.colors.bg.primary};
   padding: ${(props) => props.theme.sizes[5]};
+  height: 165px;
 `;
 
-export const MapCardCover = styled(Card.Cover)`
-  background-color: ${(props) => props.theme.colors.bg.primary};
-  width: 100%;
-  height: 75%;
+export const CompactImage = styled(Card.Cover)`
+  border-radius: 5px;
+  width: 120px;
+  height: 100px;
 `;
 
 export const HeadingText = styled.Text`
@@ -55,4 +57,10 @@ export const SectionEnd = styled.View`
   flex: 1;
   flex-direction: row;
   justify-content: flex-end;
+`;
+
+export const CompactWebView = styled(WebView)`
+  border-radius: 5px;
+  width: 120px;
+  height: 100px;
 `;
